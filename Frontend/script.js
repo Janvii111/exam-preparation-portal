@@ -1,7 +1,7 @@
 
 
 // ================= API =================
-const API = "http://localhost:5000";
+const API = "https://exam-preparation-portal.onrender.com";
 
 
 // ================= NAVIGATION =================
