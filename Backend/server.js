@@ -8,7 +8,8 @@ app.use(cors());
 
 
 // ================= DATABASE =================
-mongoose.connect("mongodb://127.0.0.1:27017/examDB")
+mongoose.connect("mongodb+srv://examadmin:Jagruti111@cluster0.rr2emuo.mongodb.net/examDB?retryWrites=true&w=majority",
+)
   .then(() => console.log("DB Connected"))
   .catch(err => console.log(err));
 
@@ -92,4 +93,8 @@ app.use("/papers", express.static("papers"));
 
 
 // ================= SERVER =================
-app.listen(5000, () => console.log("Server running on port 5000"));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
